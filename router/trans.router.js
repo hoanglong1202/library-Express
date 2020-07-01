@@ -9,8 +9,14 @@ const controller = require('../controllers/trans.controller');
 //Hàm thực thi
 
 router.get('/', controller.index);
+
 router.get('/create', controller.create);
 router.post('/create', controller.postCreate);
+
 router.get('/:id/delete', controller.delete);
+
 router.get('/:id', controller.view);
+
+router.get('/:id/complete', controller.isComplete);
+router.post('/:id/complete', controller.isCompletePost);
 

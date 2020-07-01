@@ -45,28 +45,40 @@
       "book": "Ánh Trăng",
       "id": "J6swiqb0C",
       "userId": "yaGtguHI0",
-      "bookId": "uyhm76Gja"
+      "bookId": "uyhm76Gja",
+      "isComplete": false
     },
     {
       "user": "Võ Đình Hoàng Long",
       "book": "Tư tưởng Hồ Chí Minh",
       "id": "9NlhAxhSu",
       "userId": "U6K3wCr0G",
-      "bookId": "3_WwDWz3E"
+      "bookId": "3_WwDWz3E",
+      "isComplete": false
     },
     {
       "user": "Võ Anh Khoa",
       "book": "Game Of Thrones",
       "id": "CpB8ggMRl",
       "userId": "uyhm76Gja",
-      "bookId": "U6K3wCr0G"
+      "bookId": "U6K3wCr0G",
+      "isComplete": false
     },
     {
       "user": "Đỗ Lưu Khánh Huyền",
       "book": "Game Of Thrones",
       "id": "miv0JDAPM",
       "userId": "xjoLnaIT9",
-      "bookId": "U6K3wCr0G"
+      "bookId": "U6K3wCr0G",
+      "isComplete": false
+    },
+    {
+      "user": "Võ Anh Khoa",
+      "book": "Cuộc chiến siêu nhiên giữa đời thường",
+      "id": "Apfm5XwC5",
+      "userId": "uyhm76Gja",
+      "bookId": "xjoLnaIT9",
+      "isComplete": "true"
     }
   ]
 }

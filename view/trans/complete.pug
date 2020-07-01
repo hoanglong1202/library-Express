@@ -1,0 +1,7 @@
+h2 Complete
+
+form(action="/trans/" + trans.id + "/complete" method="post")
+    select(name="isComplete")
+        option(value="true") True
+        option(value="false") False
+    button Submit

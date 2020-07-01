@@ -20,8 +20,13 @@ module.exports.create = function (req, res) {
 //post dữ liệu lên trang create 
 module.exports.postCreate = function (req, res) {
     req.body.id = shortid.generate();
-    req.body.userId = db.get('users').find({name: req.body.user}).value().id;
-    req.body.bookId = db.get('books').find({title: req.body.book}).value().id;
+    req.body.userId = db.get('users').find({
+        name: req.body.user
+    }).value().id;
+    req.body.bookId = db.get('books').find({
+        title: req.body.book
+    }).value().id;
+    req.body.isComplete = false;
     db.get('trans').push(req.body).write();
     res.redirect('/trans');
 };
@@ -38,10 +43,35 @@ module.exports.delete = function (req, res) {
 };
 
 //tạo view
-module.exports.view = function(req, res){
+module.exports.view = function (req, res) {
     var id = req.params.id;
-    var trans = db.get('trans').find({id: id}).value();
+    var trans = db.get('trans').find({
+        id: id
+    }).value();
     res.render('trans/view', {
         trans: trans
     });
 };
+
+//isComplete
+module.exports.isComplete = function (req, res) {
+    var id = req.params.id;
+    var trans = db.get('trans').find({id: id}).value();
+
+    res.render('trans/complete',{
+        trans: trans
+    });
+}
+
+module.exports.isCompletePost = function (req, res) {
+    var id = req.params.id;
+    db.get('trans')
+        .find({
+            id: id
+        })
+        .assign({
+            isComplete: req.body.isComplete
+        })
+        .write();
+    res.redirect('/trans');
+}
