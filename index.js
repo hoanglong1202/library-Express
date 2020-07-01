@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({
 //Khai báo Router
 const userRoute = require('./router/user.router');
 const bookRoute = require('./router/book.router');
+const transRouter = require('./router/trans.router');
 
 //thiết lập template PUG
 app.set('view engine', 'pug');
@@ -26,6 +27,7 @@ app.get('/', function (req, res) {
 //sử dụng router
 app.use('/users', userRoute);
 app.use('/books', bookRoute);
+app.use('/trans', transRouter);
 
 //notification của server
 app.listen(port, function () {
