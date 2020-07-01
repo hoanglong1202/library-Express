@@ -1,6 +1,8 @@
 h1 USERS
-
-a(href="/users/create") New
+div 
+    a(href="/") Home
+div
+    a(href="/users/create") New
 form(action="/users/search" method="GET")
     input(type="text" name="q")
     button Search
@@ -11,4 +13,6 @@ ul
             span &nbsp;
             a(href="/users/" + val.id) View
             span &nbsp;
-            a(href="/users/" +  val.id +"/delete") Delete
+            a(href="/users/" + val.id + "/update") Update
+            span &nbsp;
+            a(href="/users/" +  val.id + "/delete") Delete

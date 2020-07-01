@@ -1,0 +1,19 @@
+h1 BOOKS
+
+div 
+    a(href="/") Home
+div
+    a(href="/books/create") New
+form(action="/books/search" method="GET")
+    input(type="text" name="q")
+    button Search
+ul 
+    each val in books
+        li 
+            span= val.title
+            span &nbsp;
+            a(href="/books/" + val.id) View
+            span &nbsp;
+            a(href="/books/" +  val.id + "/delete") Delete
+            span &nbsp;
+            a(href="/books/" +  val.id + "/update") Update

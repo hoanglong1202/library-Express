@@ -1,14 +1,19 @@
+var port = 3000;
+
+//khai báo Express
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-
-const userRoute = require('./router/user.router');
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+//Khai báo Router
+const userRoute = require('./router/user.router');
+const bookRoute = require('./router/book.router');
+
+//thiết lập template PUG
 app.set('view engine', 'pug');
 app.set('views', './view');
 
@@ -18,8 +23,11 @@ app.get('/', function (req, res) {
     });
 });
 
+//sử dụng router
 app.use('/users', userRoute);
+app.use('/books', bookRoute);
 
-app.listen(3000, function () {
-    console.log('server is start on port na');
+//notification của server
+app.listen(port, function () {
+    console.log('server is start on port ' + port);
 });
