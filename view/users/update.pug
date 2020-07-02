@@ -1,6 +1,14 @@
-h1 Update
+extend ../layouts/common
 
-form(action="/users/" + user.id + "/update" method="post")
-    label Name
-    input(type="text" name="name")
-    button Update
+block content
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') UPDATE USER
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/users') Home
+    form(action="/users/" + user.id + "/update" method="post")
+        .form-group
+            label(for='exampleInputEmail1') Name
+            input#exampleInputEmail1.form-control(type='text', name='name')
+        button.btn.btn-primary(type='submit') Update

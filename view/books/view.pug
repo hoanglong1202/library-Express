@@ -1,10 +1,20 @@
-h1 View Books
+extend ../layouts/common
 
-p
-    h3 ID
-    span= book.id
-    h3 Title
-    span= book.title
-    span &nbsp;
-    h3 Description
-    span= book.description
+block content
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') VIEW BOOK
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/users') Home
+    table.table.table-bordered
+        thead.thead-dark
+            tr
+                th(scope='col') ID
+                th(scope='col') Title
+                th(scope='col') Description
+        tbody
+            tr
+                td= book.id
+                td= book.title
+                td= book.description

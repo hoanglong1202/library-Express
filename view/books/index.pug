@@ -1,19 +1,35 @@
-h1 BOOKS
+extend ../layouts/common
 
-div 
-    a(href="/") Home
-div
-    a(href="/books/create") New
-form(action="/books/search" method="GET")
-    input(type="text" name="q")
-    button Search
-ul 
-    each val in books
-        li 
-            span= val.title
-            span &nbsp;
-            a(href="/books/" + val.id) View
-            span &nbsp;
-            a(href="/books/" +  val.id + "/delete") Delete
-            span &nbsp;
-            a(href="/books/" +  val.id + "/update") Update
+block content
+    h1 BOOKS
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') Books
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/') Home
+                li.nav-item
+                    a.nav-link(href="/books/create") New 
+
+    form(action="/books/search" method="get")
+        .form-group
+            label(for='exampleInputEmail1') Tìm kiếm
+            input#exampleInputEmail1.form-control(type='text', name='q')
+        button.btn.btn-primary(type='submit') Search
+    table.table.table-bordered
+        thead.thead-dark
+            tr
+                th(scope='col') Book Title
+                th(scope='col') 
+                th(scope='col') 
+                th(scope='col') 
+        tbody
+            each val in books
+                tr 
+                    td.text-center= val.title
+                    td.text-center
+                        a(href="/books/" + val.id) View
+                    td.text-center
+                        a(href="/books/" + val.id + "/update") Update
+                    td.text-center
+                        a(href="/books/" +  val.id + "/delete") Delete

@@ -1,7 +1,18 @@
-h1 View User
+extend ../layouts/common
 
-p
-    h2 Name
-    span= user.name
-    h2 ID
-    span= user.id
+block content
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') VIEW USER
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/users') Home
+    table.table.table-bordered
+        thead.thead-dark
+            tr
+                th(scope='col') UserID
+                th(scope='col') Name
+        tbody
+            tr
+                td= user.id
+                td= user.name

@@ -26,7 +26,7 @@ module.exports.postCreate = function (req, res) {
     req.body.bookId = db.get('books').find({
         title: req.body.book
     }).value().id;
-    req.body.isComplete = false;
+    req.body.isComplete = "false";
     db.get('trans').push(req.body).write();
     res.redirect('/trans');
 };

@@ -37,6 +37,11 @@
       "title": "Tư tưởng Hồ Chí Minh",
       "description": "nope",
       "id": "3_WwDWz3E"
+    },
+    {
+      "title": "Định Mệng",
+      "description": "Accel God",
+      "id": "VZfbqE9ij"
     }
   ],
   "trans": [
@@ -54,7 +59,7 @@
       "id": "9NlhAxhSu",
       "userId": "U6K3wCr0G",
       "bookId": "3_WwDWz3E",
-      "isComplete": false
+      "isComplete": "true"
     },
     {
       "user": "Võ Anh Khoa",
@@ -78,6 +83,14 @@
       "id": "Apfm5XwC5",
       "userId": "uyhm76Gja",
       "bookId": "xjoLnaIT9",
+      "isComplete": "true"
+    },
+    {
+      "user": "Đỗ Lưu Khánh Huyền",
+      "book": "Tư tưởng Hồ Chí Minh",
+      "id": "H5VAkDQ0x",
+      "userId": "xjoLnaIT9",
+      "bookId": "3_WwDWz3E",
       "isComplete": "true"
     }
   ]

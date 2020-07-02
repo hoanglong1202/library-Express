@@ -1,7 +1,24 @@
-h1 Update
+extend ../layouts/common
 
-form(action="/books/" + book.id + "/update" method="post")
-    label Name
-    input(type="text" name="title")
-    input(type="text" name="description")
-    button Update
+block content
+    //- h1 Update
+
+    //- form(action="/books/" + book.id + "/update" method="post")
+    //-     label Name
+    //-     input(type="text" name="title")
+    //-     input(type="text" name="description")
+    //-     button Update
+
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') UPDATE BOOK
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/books') Home
+    form(action="/books/" + book.id + "/update" method="post")
+        .form-group
+            label(for='exampleInputEmail1') Title
+            input#exampleInputEmail1.form-control(type='text', name='title')
+            label(for='exampleInputEmail1') Description
+            input#exampleInputEmail1.form-control(type='text', name='description')
+        button.btn.btn-primary(type='submit') Update

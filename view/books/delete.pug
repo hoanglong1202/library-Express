@@ -1,3 +1,9 @@
-h2 Delete Success
+extend ../layouts/common
 
-a(href="/books") Books
+block content
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') SUCCESS
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/books') Home

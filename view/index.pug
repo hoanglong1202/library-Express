@@ -1,7 +1,9 @@
-h1 Quản lý thư viện của #{name} dep zai
-div
-    a(href="/books") Books
-div
-    a(href="/users") User
-div
-    a(href="/trans") Transactions
+extend ./layouts/common
+
+block content
+    h1 Quản lý thư viện của #{name} dep zai
+    .list-group
+        a.list-group-item.list-group-item-action.list-group-item-primary(href='/books') Books
+        a.list-group-item.list-group-item-action.list-group-item-primary(href='/users') Users
+        a.list-group-item.list-group-item-action.list-group-item-primary(href='/trans') Transactions
+

@@ -1,22 +1,31 @@
-h1 Transaction
+extend ../layouts/common
 
-div 
-    a(href="/") Home
-div
-    a(href="/trans/create") New
+block content
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') Transactions
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/') Home
+                li.nav-item
+                    a.nav-link(href="/trans/create") New
 
-ul
-    each val in trans
-        li
-            b User: 
-            span= val.user
-            span &nbsp;
-            b Book:
-            span &nbsp;
-            span= val.book
-            span &nbsp;
-            a(href="/trans/" + val.id) View
-            span &nbsp;
-            a(href="/trans/" +  val.id + "/delete") Delete
-            span &nbsp;
-            a(href="/trans/" +  val.id + "/complete") Complete
+    table.table.table-bordered
+        thead.thead-dark
+            tr
+                th(scope='col') User
+                th(scope='col') Book
+                th(scope='col') 
+                th(scope='col') 
+                th(scope='col') 
+        tbody
+            each val in trans
+                tr 
+                    td.text-center= val.user
+                    td.text-center= val.book
+                    td.text-center
+                        a(href="/trans/" + val.id) View
+                    td.text-center
+                        a(href="/trans/" + val.id + "/delete") Delete
+                    td.text-center
+                        a(href="/trans/" + val.id + "/complete") Complete

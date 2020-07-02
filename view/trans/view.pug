@@ -1,16 +1,24 @@
-h2 Transaction
+extend ../layouts/common
 
-h3 UserID
-div= trans.userId
-
-h3 User
-div= trans.user
-
-h3 BookID
-div= trans.bookId
-h3 Book
-div= trans.book
-
-b Complete 
-span &nbsp; 
-span= trans.isComplete
+block content
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') VIEW TRANSACTION
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/trans') Home
+    table.table.table-bordered
+        thead.thead-dark
+            tr
+                th(scope='col') UserID
+                th(scope='col') Name
+                th(scope='col') BookID
+                th(scope='col') Title
+                th(scope='col') Complete
+        tbody
+            tr
+                td= trans.userId
+                td= trans.user
+                td= trans.bookId
+                td= trans.book
+                td= trans.isComplete

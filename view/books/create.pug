@@ -1,6 +1,24 @@
-h1 Create Users
-form(action="/books/create" method="post")
-    label Name
-    input(type="text" name="title")
-    input(type="text" name="description")
-    button Create
+extend ../layouts/common
+
+block content
+    //- h1 Create Users
+    //- form(action="/books/create" method="post")
+    //-     label Name
+    //-     input(type="text" name="title")
+    //-     input(type="text" name="description")
+    //-     button Create
+    
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') CREATE BOOK
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/books') Home
+
+    form(action='/books/create', method='post')
+        .form-group
+            label(for='exampleInputEmail1') Book
+            input#exampleInputEmail1.form-control(type='text', name='title')
+            label(for='exampleInputEmail1') Description
+            input#exampleInputEmail1.form-control(type='text', name='description')
+        button.btn.btn-primary(type='submit') Create

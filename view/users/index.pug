@@ -1,18 +1,34 @@
-h1 USERS
-div 
-    a(href="/") Home
-div
-    a(href="/users/create") New
-form(action="/users/search" method="GET")
-    input(type="text" name="q")
-    button Search
-ul 
-    each val in users
-        li 
-            span= val.name
-            span &nbsp;
-            a(href="/users/" + val.id) View
-            span &nbsp;
-            a(href="/users/" + val.id + "/update") Update
-            span &nbsp;
-            a(href="/users/" +  val.id + "/delete") Delete
+extend ../layouts/common
+
+block content
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') USERS
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/') Home
+                li.nav-item
+                    a.nav-link(href='/users/create') New
+
+    form(action='/users/search', method='GET')
+        .form-group
+            label(for='exampleInputEmail1') Tìm kiếm
+            input#exampleInputEmail1.form-control(type='text', name='q')
+        button.btn.btn-primary(type='submit') Search
+    table.table.table-bordered
+        thead.thead-dark
+            tr
+                th(scope='col') User Name
+                th(scope='col') 
+                th(scope='col') 
+                th(scope='col') 
+        tbody
+            each val in users
+                tr 
+                    td.text-center= val.name
+                    td.text-center
+                        a(href="/users/" + val.id) View
+                    td.text-center
+                        a(href="/users/" + val.id + "/update") Update
+                    td.text-center
+                        a(href="/users/" +  val.id + "/delete") Delete

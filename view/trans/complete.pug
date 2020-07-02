@@ -1,7 +1,18 @@
-h2 Complete
+extend ../layouts/common
 
-form(action="/trans/" + trans.id + "/complete" method="post")
-    select(name="isComplete")
-        option(value="true") True
-        option(value="false") False
-    button Submit
+block content
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') COMPLETE TRANSACTION
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/trans') Home
+    form(action="/trans/" + trans.id + "/complete" method="post")
+        .input-group.mb-3
+            .input-group-prepend
+                label.input-group-text(for='inputGroupSelect01') User
+            select#inputGroupSelect01.custom-select(name='isComplete')
+                option(selected='') Choose...
+                option(value="true") True
+                option(value="false") False
+        button.btn.btn-success Submit

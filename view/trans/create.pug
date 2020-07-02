@@ -1,15 +1,25 @@
-h2 Create Transaction
+extend ../layouts/common
 
-form(action="/trans/create" method="post")
-    h3 User
-    div
-        select(name = "user")
-            each val in users
-                option(value= val.name) #{val.name}
-
-    h3 Book
-    div
-        select(name = "book")
-            each val in books
-                option(value= val.title) #{val.title}
-    button Create
+block content
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') CREATE TRANSACTION
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/trans') Home
+    form(action="/trans/create" method="post")
+        .input-group.mb-3
+            .input-group-prepend
+                label.input-group-text(for='inputGroupSelect01') User
+            select#inputGroupSelect01.custom-select(name='user')
+                option(selected='') Choose...
+                each val in users
+                    option(value= val.name) #{val.name}
+        .input-group.mb-3
+            .input-group-prepend
+                label.input-group-text(for='inputGroupSelect01') Book
+            select#inputGroupSelect01.custom-select(name='book')
+                option(selected='') Choose...
+                each val in books
+                    option(value= val.title) #{val.title}
+        button.btn.btn-success Create

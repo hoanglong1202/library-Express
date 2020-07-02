@@ -1,5 +1,14 @@
-h1 Create Users
-form(action="/users/create" method="post")
-    label Name
-    input(type="text" name="name")
-    button Create
+extend ../layouts/common
+
+block content
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#') CREATE USERS
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/users') Home
+    form(action='/users/create', method='post')
+        .form-group
+            label(for='exampleInputEmail1') User
+            input#exampleInputEmail1.form-control(type='text', name='name')
+        button.btn.btn-primary(type='submit') Create
