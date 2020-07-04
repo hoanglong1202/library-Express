@@ -24,6 +24,9 @@ app.get('/', function (req, res) {
     });
 });
 
+//khai báo thư mực static files 
+app.use(express.static('public'));
+
 //sử dụng router
 app.use('/users', userRoute);
 app.use('/books', bookRoute);
