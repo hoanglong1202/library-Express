@@ -9,11 +9,13 @@ block content
             ul.navbar-nav
                 li.nav-item
                     a.nav-link(href='/books') Home
-
+    if errors   
+        each error in errors
+            .alert.alert-danger(role='alert')= error
     form(action='/books/create', method='post')
         .form-group
             label(for='exampleInputEmail1') Book
-            input#exampleInputEmail1.form-control(type='text', name='title')
+            input#exampleInputEmail1.form-control(type='text', name='title', value = values ? values.title : '')
             label(for='exampleInputEmail1') Description
-            input#exampleInputEmail1.form-control(type='text', name='description')
+            input#exampleInputEmail1.form-control(type='text', name='description',value = values ? values.description : '')
         button.btn.btn-primary(type='submit') Create

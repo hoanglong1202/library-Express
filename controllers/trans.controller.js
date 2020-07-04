@@ -56,6 +56,7 @@ module.exports.view = function (req, res) {
 //isComplete
 module.exports.isComplete = function (req, res) {
     var id = req.params.id;
+    //validate
     var trans = db.get('trans').find({id: id}).value();
     var error;
     if(!trans){

@@ -23,12 +23,27 @@ module.exports.search = function (req, res) {
 
 //đưa đến trang create để nhập dữ liệu vào form
 module.exports.create = function (req, res) {
-    res.render('books/create')
+    res.render('books/create');
 };
 
 //POST dữ liệu từ form vừa nhập lên server
 module.exports.postCreate = function (req, res) {
     req.body.id = shortid.generate();
+
+     //validate
+    var errors = [];
+    if(!req.body.title)
+        errors.push('Title không được để trống');
+    if(!req.body.description)
+        errors.push('Description không được để trống');
+    if(errors){
+        res.render('books/create',{
+            errors: errors,
+            values: req.body
+        });
+        return;
+    }
+    
     db.get('books')
         .push(req.body)
         .write();

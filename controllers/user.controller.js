@@ -29,10 +29,24 @@ module.exports.create = function (req, res) {
 //POST dữ liệu từ form vừa nhập lên server
 module.exports.postCreate = function (req, res) {
     req.body.id = shortid.generate();
+
+    //validate
+    var errors;
+    if(!req.body.name)
+        errors = 'Tên không được để trống';
+    if(req.body.name.length > 30)
+        errors ='Tên không được quá 30 ký tự';
+    
+    if(errors){
+        res.render('users/create',{
+            errors: errors
+        });
+        return;
+    }
     db.get('users')
         .push(req.body)
         .write();
-    res.redirect('/');
+    res.redirect('/users');
 };
 
 module.exports.view = function (req, res) {

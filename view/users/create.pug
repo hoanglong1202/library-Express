@@ -9,8 +9,10 @@ block content
             ul.navbar-nav
                 li.nav-item
                     a.nav-link(href='/users') Home
+    if errors    
+        .alert.alert-danger(role='alert')= errors
     form(action='/users/create', method='post')
         .form-group
             label(for='exampleInputEmail1') User
-            input#exampleInputEmail1.form-control(type='text', name='name')
+            input#exampleInputEmail1.form-control(type='text', name='name', value= value? value.length>30?value.name:'':'')
         button.btn.btn-primary(type='submit') Create
