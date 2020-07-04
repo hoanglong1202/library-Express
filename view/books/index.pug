@@ -1,7 +1,6 @@
 extend ../layouts/common
 
 block content
-    h1 BOOKS
     nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
         a.navbar-brand(href='#')
             img(src="/images/p1.jpg", alt="lolol",width="30", height="30",loading="lazy")
@@ -30,8 +29,8 @@ block content
                 tr 
                     td.text-center= val.title
                     td.text-center
-                        a(href="/books/" + val.id) View
+                        a.btn.btn-light(href="/books/" + val.id) View
                     td.text-center
-                        a(href="/books/" + val.id + "/update") Update
+                        a.btn.btn-light(href="/books/" + val.id + "/update") Update
                     td.text-center
-                        a(href="/books/" +  val.id + "/delete") Delete
+                        a.btn.btn-light(href="/books/" +  val.id + "/delete") Delete

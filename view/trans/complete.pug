@@ -9,12 +9,16 @@ block content
             ul.navbar-nav
                 li.nav-item
                     a.nav-link(href='/trans') Home
-    form(action="/trans/" + trans.id + "/complete" method="post")
-        .input-group.mb-3
-            .input-group-prepend
-                label.input-group-text(for='inputGroupSelect01') User
-            select#inputGroupSelect01.custom-select(name='isComplete')
-                option(selected='') Choose...
-                option(value="true") True
-                option(value="false") False
-        button.btn.btn-success Submit
+
+    if error
+        .alert.alert-danger(role='alert')= error
+    else
+        form(action="/trans/" + trans.id + "/complete" method="post")
+            .input-group.mb-3
+                .input-group-prepend
+                    label.input-group-text(for='inputGroupSelect01') User
+                select#inputGroupSelect01.custom-select(name='isComplete')
+                    option(selected='') Choose...
+                    option(value="true") True
+                    option(value="false") False
+            button.btn.btn-success Submit
