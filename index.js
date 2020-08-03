@@ -15,7 +15,8 @@ app.use(cookieParser());
 const userRoute = require('./router/user.router');
 const bookRoute = require('./router/book.router');
 const transRouter = require('./router/trans.router');
-
+const authRouter = require('./router/auth.router');
+const authMiddleware = require('./middleware/auth.middleware');
 
 //thiết lập template PUG
 app.set('view engine', 'pug');
@@ -42,9 +43,10 @@ app.get('/', middlewareCookie, function (req, res) {
 app.use(express.static('public'));
 
 //sử dụng router
-app.use('/users', userRoute);
-app.use('/books', bookRoute);
-app.use('/trans', transRouter);
+app.use('/auth/login', authRouter);
+app.use('/users', authMiddleware.requireAuth, authMiddleware.isAdmin, userRoute);
+app.use('/books', authMiddleware.requireAuth, authMiddleware.isAdmin, bookRoute);
+app.use('/trans', authMiddleware.requireAuth, transRouter);
 
 //notification của server
 app.listen(port, function () {
