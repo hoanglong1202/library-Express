@@ -4,29 +4,33 @@
       "name": "Đỗ Lưu Khánh Huyền",
       "id": "xjoLnaIT9",
       "email": "khanhhuyen@gmail.com",
-      "pass": "4297f44b13955235245b2497399d7a93",
-      "isAdmin": "true"
+      "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6",
+      "isAdmin": true,
+      "wrongLoginCount": 0
     },
     {
       "name": "Võ Đình Hoàng Long",
       "id": "U6K3wCr0G",
       "email": "cyberpunk2076@gmail.com",
-      "pass": "4297f44b13955235245b2497399d7a93",
-      "isAdmin": "true"
+      "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6",
+      "isAdmin": true,
+      "wrongLoginCount": 0
     },
     {
       "name": "Võ Anh Khoa",
       "id": "uyhm76Gja",
       "email": "anhkhoa@gmail.com",
-      "pass": "4297f44b13955235245b2497399d7a93",
-      "isAdmin": "false"
+      "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6",
+      "isAdmin": false,
+      "wrongLoginCount": 5
     },
     {
       "name": "Hồ Hoài Sản",
       "id": "yaGtguHI0",
       "email": "hoaisan@gmail.com",
-      "pass": "4297f44b13955235245b2497399d7a93",
-      "isAdmin": "false"
+      "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6",
+      "isAdmin": false,
+      "wrongLoginCount": 0
     }
   ],
   "books": [
