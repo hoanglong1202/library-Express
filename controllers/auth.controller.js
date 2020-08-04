@@ -1,5 +1,6 @@
 //lấy khai báo lowdb từ db.js
 var db = require('../db');
+var md5 = require('md5');
 
 module.exports.index = function (req, res) {
     res.render('auth/index');
@@ -39,7 +40,9 @@ module.exports.postLogin = function (req, res) {
         return;
     }
 
-    if (user.pass !== pass) {
+    var harshPass = md5(pass);
+
+    if (user.pass !== harshPass) {
         errors = 'Password không đúng';
         res.render('auth/index', {
             errors: errors,

@@ -4,28 +4,28 @@
       "name": "Đỗ Lưu Khánh Huyền",
       "id": "xjoLnaIT9",
       "email": "khanhhuyen@gmail.com",
-      "pass": "123123",
+      "pass": "4297f44b13955235245b2497399d7a93",
       "isAdmin": "true"
     },
     {
       "name": "Võ Đình Hoàng Long",
       "id": "U6K3wCr0G",
       "email": "cyberpunk2076@gmail.com",
-      "pass": "123123",
+      "pass": "4297f44b13955235245b2497399d7a93",
       "isAdmin": "true"
     },
     {
       "name": "Võ Anh Khoa",
       "id": "uyhm76Gja",
       "email": "anhkhoa@gmail.com",
-      "pass": "123123",
+      "pass": "4297f44b13955235245b2497399d7a93",
       "isAdmin": "false"
     },
     {
       "name": "Hồ Hoài Sản",
       "id": "yaGtguHI0",
       "email": "hoaisan@gmail.com",
-      "pass": "123123",
+      "pass": "4297f44b13955235245b2497399d7a93",
       "isAdmin": "false"
     }
   ],
