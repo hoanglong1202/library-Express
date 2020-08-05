@@ -11,6 +11,8 @@ block content
                     a.nav-link(href='/') Home
                 li.nav-item
                     a.nav-link(href="/books/create") New 
+        if user
+            p(style ="color:white;")= user.name                    
 
     form(action="/books/search" method="get")
         .form-group

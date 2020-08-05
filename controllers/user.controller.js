@@ -42,7 +42,7 @@ module.exports.view = function (req, res) {
     }).value();
 
     res.render('users/view', {
-        user: user
+        users: user
     });
 };
 

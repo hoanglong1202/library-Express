@@ -9,6 +9,8 @@ block content
             ul.navbar-nav
                 li.nav-item
                     a.nav-link(href='/users') Home
+        if user
+            p(style ="color:white;")= user.name       
     form(action="/users/" + user.id + "/update" method="post")
         .form-group
             label(for='exampleInputEmail1') Name

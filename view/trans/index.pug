@@ -11,6 +11,8 @@ block content
                     a.nav-link(href='/') Home
                 li.nav-item
                     a.nav-link(href="/trans/create") New
+        if user
+            p(style ="color:white;")= user.name                    
 
     table.table.table-bordered
         thead.thead-dark

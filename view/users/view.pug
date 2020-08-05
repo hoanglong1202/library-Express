@@ -9,6 +9,8 @@ block content
             ul.navbar-nav
                 li.nav-item
                     a.nav-link(href='/users') Home
+        if user
+            p(style ="color:white;")= user.name                    
     table.table.table-bordered
         thead.thead-dark
             tr
@@ -16,5 +18,5 @@ block content
                 th(scope='col') Name
         tbody
             tr
-                td= user.id
-                td= user.name
+                td= users.id
+                td= users.name
