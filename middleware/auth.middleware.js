@@ -22,7 +22,7 @@ module.exports.requireAuth = function (req, res, next) {
 
 module.exports.isAdmin = function (req, res, next) {
     // route nao ma khong muon nguoi dung binh thuong access thi them cai middleware nay vao
-    if (req.signedCookies.isAdmin === false) {
+    if (req.signedCookies.isAdmin === 'false') {
         return res.render('404');
     }
     return next();

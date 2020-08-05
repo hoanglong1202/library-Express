@@ -1,5 +1,6 @@
 var port = 3000;
-
+//reuire dotenv
+require('dotenv').config();
 //khai báo Express
 const express = require('express');
 const app = express();
@@ -9,7 +10,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(cookieParser('longdeptrai123'));
+
+app.use(cookieParser(process.env.SESSION_SECRET));
+//app.use(cookieParser('longdeptrai123'));
 
 //Khai báo Router
 const userRoute = require('./router/user.router');

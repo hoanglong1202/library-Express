@@ -14,7 +14,7 @@
       "email": "cyberpunk2076@gmail.com",
       "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6",
       "isAdmin": true,
-      "wrongLoginCount": 0
+      "wrongLoginCount": 8
     },
     {
       "name": "Võ Anh Khoa",
@@ -22,7 +22,7 @@
       "email": "anhkhoa@gmail.com",
       "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6",
       "isAdmin": false,
-      "wrongLoginCount": 5
+      "wrongLoginCount": 0
     },
     {
       "name": "Hồ Hoài Sản",
