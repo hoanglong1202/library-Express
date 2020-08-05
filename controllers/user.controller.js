@@ -4,8 +4,16 @@ const shortid = require('shortid');
 
 //trang index của users
 module.exports.index = function (req, res) {
+    //pagination
+    var page = parseInt(req.query.page) || 1;
+    var perPage = 2;
+    var begin = (page - 1) * perPage;
+    var end = page * perPage;
+    var total = Math.ceil(Object.keys(db.get('users').value()).length / perPage);
+
     res.render('users/index', {
-        users: db.get('users').value()
+        totalPage: total,
+        users: db.get('users').value().slice(begin, end)
     });
 };
 
@@ -70,6 +78,10 @@ module.exports.update = function (req, res) {
 //POST dữ liệu từ form vừa nhập lên server
 module.exports.postUpdate = function (req, res) {
     var id = req.params.id;
-    db.get('users').find({ id: id }).assign({name: req.body.name}).write(); 
+    db.get('users').find({
+        id: id
+    }).assign({
+        name: req.body.name
+    }).write();
     res.redirect('/users');
 };

@@ -12,7 +12,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(cookieParser(process.env.SESSION_SECRET));
-//app.use(cookieParser('longdeptrai123'));
 
 //Khai báo Router
 const userRoute = require('./router/user.router');
@@ -26,13 +25,13 @@ app.set('view engine', 'pug');
 app.set('views', './view');
 
 function middlewareCookie(req, res, next) {
-    console.log(req.cookies.count);
     if (!req.cookies.count)
         res.cookie('count', 1);
     else{
         var num = Number(req.cookies.count);
         res.cookie('count', ++num);
     }
+    console.log("Main page access times: " + req.cookies.count);
     next();
 };
 

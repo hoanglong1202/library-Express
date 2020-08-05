@@ -36,3 +36,8 @@ block content
                         a.btn.btn-light(href="/users/" + val.id + "/update") Update
                     td.text-center
                         a.btn.btn-light(href="/users/" +  val.id + "/delete") Delete
+    ul.pagination.justify-content-center
+        -for (i = 1; i <= totalPage; i++){
+            li.page-item
+                a.page-link(href="?page=" + i)= i
+        -}

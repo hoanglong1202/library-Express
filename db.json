@@ -67,7 +67,7 @@
       "id": "J6swiqb0C",
       "userId": "yaGtguHI0",
       "bookId": "uyhm76Gja",
-      "isComplete": "true"
+      "isComplete": true
     },
     {
       "user": "Võ Đình Hoàng Long",
@@ -75,7 +75,7 @@
       "id": "9NlhAxhSu",
       "userId": "U6K3wCr0G",
       "bookId": "3_WwDWz3E",
-      "isComplete": "true"
+      "isComplete": true
     },
     {
       "user": "Võ Anh Khoa",
@@ -99,7 +99,7 @@
       "id": "Apfm5XwC5",
       "userId": "uyhm76Gja",
       "bookId": "xjoLnaIT9",
-      "isComplete": "true"
+      "isComplete": true
     },
     {
       "user": "Đỗ Lưu Khánh Huyền",
@@ -107,7 +107,7 @@
       "id": "H5VAkDQ0x",
       "userId": "xjoLnaIT9",
       "bookId": "3_WwDWz3E",
-      "isComplete": "true"
+      "isComplete": true
     }
   ]
 }

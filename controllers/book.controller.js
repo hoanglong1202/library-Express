@@ -4,8 +4,16 @@ const shortid = require('shortid');
 
 //trang index của books
 module.exports.index = function (req, res) {
+    //pagination
+    var page = parseInt(req.query.page) || 1;
+    var perPage = 2;
+    var begin = (page - 1) * perPage;
+    var end = page * perPage;
+    var total = Math.ceil(Object.keys(db.get('books').value()).length/perPage);
+    
     res.render('books/index', {
-        books: db.get('books').value()
+        totalPage: total,
+        books: db.get('books').value().slice(begin, end)
     });
 };
 

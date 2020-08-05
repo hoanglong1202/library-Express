@@ -57,7 +57,6 @@ module.exports.postLogin = function (req, res) {
         };
         //gửi message
         //sgMail.send(msg);
-        console.log(msg);
         (async () => {
             try {
                 await sgMail.send(msg);

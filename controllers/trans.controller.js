@@ -4,8 +4,16 @@ const shortid = require('shortid');
 
 //đổ dữ liệu ra từ trans/index
 module.exports.index = function (req, res) {
+    //pagination
+    var page = parseInt(req.query.page) || 1;
+    var perPage = 2;
+    var begin = (page - 1) * perPage;
+    var end = page * perPage;
+    var total = Math.ceil(Object.keys(db.get('trans').value()).length / perPage);
+
     res.render('trans/index', {
-        trans: db.get('trans').value()
+        totalPage: total,
+        trans: db.get('trans').value().slice(begin, end)
     });
 };
 
@@ -57,16 +65,18 @@ module.exports.view = function (req, res) {
 module.exports.isComplete = function (req, res) {
     var id = req.params.id;
     //validate
-    var trans = db.get('trans').find({id: id}).value();
+    var trans = db.get('trans').find({
+        id: id
+    }).value();
     var error;
-    if(!trans){
+    if (!trans) {
         error = 'ID không tồn tại';
-        res.render('trans/complete',{
+        res.render('trans/complete', {
             error: error
         });
         return;
     }
-    res.render('trans/complete',{
+    res.render('trans/complete', {
         trans: trans
     });
 }
