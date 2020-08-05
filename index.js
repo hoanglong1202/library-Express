@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(cookieParser());
+app.use(cookieParser('longdeptrai123'));
 
 //Khai báo Router
 const userRoute = require('./router/user.router');

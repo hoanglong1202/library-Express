@@ -1,6 +1,5 @@
 //lấy khai báo lowdb từ db.js
 var db = require('../db');
-var md5 = require('md5');
 var bcrypt = require('bcrypt');
 
 module.exports.index = function (req, res) {
@@ -42,8 +41,8 @@ module.exports.postLogin = function (req, res) {
     }
 
     var checkLegit = Number(user.wrongLoginCount);
-    console.log(checkLegit);
-    if (checkLegit > 4){
+    //console.log(checkLegit);
+    if (checkLegit > 4) {
         return res.render('404');
     }
 
@@ -69,27 +68,31 @@ module.exports.postLogin = function (req, res) {
             });
             return;
         }
-
-        //nếu pass nhập đúng
-        //server gửi cookie cho client
-        res.cookie('userID', user.id);
-
-        //set lại số lận nhập sai pass
-        var countWrong = 0;
-        db.get('users').find({
-            email: email
-        }).assign({
-            wrongLoginCount: countWrong
-        }).write();
-
-        if (user.isAdmin === "true") {
-            res.cookie('isAdmin', true);
-            res.redirect('/users');
-        } else {
-            res.cookie('isAdmin', false);
-            res.redirect('/trans');
-        }
     });
 
+    //nếu pass nhập đúng
+    //server gửi cookie cho client
+    res.cookie('userID', user.id, {
+        signed: true
+    });
 
+    //set lại số lận nhập sai pass
+    var countWrong = 0;
+    db.get('users').find({
+        email: email
+    }).assign({
+        wrongLoginCount: countWrong
+    }).write();
+
+    if (user.isAdmin === true) {
+        res.cookie('isAdmin', true, {
+            signed: true
+        });
+        res.redirect('/users');
+    } else {
+        res.cookie('isAdmin', false, {
+            signed: true
+        });
+        res.redirect('/trans');
+    }
 }
