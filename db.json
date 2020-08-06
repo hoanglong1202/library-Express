@@ -6,7 +6,8 @@
       "email": "khanhhuyen@gmail.com",
       "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6",
       "isAdmin": true,
-      "wrongLoginCount": 0
+      "wrongLoginCount": 0,
+      "avatar": ""
     },
     {
       "name": "Võ Đình Hoàng Long",
@@ -14,7 +15,8 @@
       "email": "cyberpunk1202@gmail.com",
       "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6",
       "isAdmin": true,
-      "wrongLoginCount": 8
+      "wrongLoginCount": 0,
+      "avatar": ""
     },
     {
       "name": "Võ Anh Khoa",
@@ -22,7 +24,8 @@
       "email": "anhkhoa@gmail.com",
       "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6",
       "isAdmin": false,
-      "wrongLoginCount": 0
+      "wrongLoginCount": 0,
+      "avatar": ""
     },
     {
       "name": "Hồ Hoài Sản",
@@ -30,7 +33,17 @@
       "email": "hoaisan@gmail.com",
       "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6",
       "isAdmin": false,
-      "wrongLoginCount": 0
+      "wrongLoginCount": 0,
+      "avatar": ""
+    },
+    {
+      "name": "Hoàng Long",
+      "email": "lorn@gmail.com",
+      "id": "_v3KmX_mJ",
+      "avatar": "uploads/b37ef039a6f63b6dba5a10a3bf6c5765",
+      "isAdmin": false,
+      "wrongLoginCount": 0,
+      "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6"
     }
   ],
   "books": [

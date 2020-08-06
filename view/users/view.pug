@@ -10,13 +10,27 @@ block content
                 li.nav-item
                     a.nav-link(href='/users') Home
         if user
-            p(style ="color:white;")= user.name                    
-    table.table.table-bordered
-        thead.thead-dark
-            tr
-                th(scope='col') UserID
-                th(scope='col') Name
-        tbody
-            tr
-                td= users.id
-                td= users.name
+            p(style ="color:white;")= user.name  
+    .row        
+        .col-12.col-md-4
+            .d-flex.justify-content-center
+                if userX.avatar
+                    img.rounded.float-left(src= "/" + userX.avatar, width="300px", height="300px",style="object-fit:cover;")
+                else
+                    img.rounded.float-left(src="https://picsum.photos/200", width="300px", height="300px",style="object-fit:cover;")
+        .col-12.col-md-8          
+            table.table.table-bordered
+                thead.thead-dark
+                    tr.text-center
+                        th(scope='col') Name
+                        th(scope='col') Email
+                        th(scope='col') 
+                        th(scope='col') 
+                tbody
+                    tr 
+                        td.text-center= userX.name
+                        td.text-center= userX.email
+                        td.text-center
+                            a.btn.btn-light(href="/users/" + userX.id + "/update") Update
+                        td.text-center
+                            a.btn.btn-light(href="/users/" +  userX.id + "/delete") Delete

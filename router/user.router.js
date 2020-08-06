@@ -1,7 +1,12 @@
 //khai báo Router 
 var express = require('express');
 var router = express.Router();
-module.exports = router;
+
+//Khai báo Multer dùng để upload file img
+var multer = require('multer');
+var upload = multer({
+    dest: './public/uploads/'
+});
 
 //lấy các function từ user.controller
 var controller = require('../controllers/user.controller');
@@ -18,8 +23,10 @@ router.get('/:id', controller.view);
 
 router.get('/:id/delete', controller.delete);
 
-router.post('/create', validate.postCreate ,controller.postCreate);
+router.post('/create', upload.single('avatar'), validate.postCreate, controller.postCreate);
 
 router.get('/:id/update', controller.update);
 
-router.post('/:id/update', controller.postUpdate);
+router.post('/:id/update', upload.single('avatar'), validate.postUpdate, controller.postUpdate);
+
+module.exports = router;

@@ -21,15 +21,23 @@ block content
         button.btn.btn-primary(type='submit') Search
     table.table.table-bordered
         thead.thead-dark
-            tr
-                th(scope='col') User Name
+            tr.text-center
+                th(scope='col') Avatar
+                th(scope='col') Name
+                th(scope='col') Email
                 th(scope='col') 
                 th(scope='col') 
                 th(scope='col') 
         tbody
             each val in users
                 tr 
+                    td.text-center
+                        if val.avatar
+                            img.rounded(src= val.avatar, width="64px", height="64px",style="object-fit:cover;")
+                        else
+                            img.rounded(src="https://picsum.photos/200", width="64px", height="64px",style="object-fit:cover;")
                     td.text-center= val.name
+                    td.text-center= val.email
                     td.text-center
                         a.btn.btn-light(href="/users/" + val.id) View
                     td.text-center

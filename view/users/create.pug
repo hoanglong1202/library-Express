@@ -12,9 +12,14 @@ block content
         if user
             p(style ="color:white;")= user.name                    
     if errors    
-        .alert.alert-danger(role='alert')= errors
-    form(action='/users/create', method='post')
+        each error in errors
+            .alert.alert-danger(role='alert')= error
+    form(action='/users/create', method='post', enctype="multipart/form-data")
         .form-group
-            label(for='exampleInputEmail1') User
-            input#exampleInputEmail1.form-control(type='text', name='name', value= value? value.length>30?value.name:'':'')
+            label(for='userName') User
+            input#userName.form-control(type='text', name='name', value= value? value.name.length<30?value.name:'':'')
+            label(for='userEmail') Email
+            input#userEmail.form-control(type='email', name='email', value= value?value.email:'')
+            label(for='userAvatar') Avatar
+            input#userAvatar.form-control-file(type='file', name='avatar')
         button.btn.btn-primary(type='submit') Create
