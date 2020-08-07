@@ -37,10 +37,37 @@
       "avatar": ""
     },
     {
-      "name": "Hoàng Long",
-      "email": "lorn@gmail.com",
-      "id": "_v3KmX_mJ",
-      "avatar": "uploads/b37ef039a6f63b6dba5a10a3bf6c5765",
+      "name": "gj",
+      "email": "gjaa@gmail.com",
+      "id": "Xeg7EpQpd",
+      "avatar": "http://res.cloudinary.com/dqaldb7bh/image/upload/v1596733392/k2vnsjhrq2l0ovdggn6h.png",
+      "isAdmin": false,
+      "wrongLoginCount": 0,
+      "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6"
+    },
+    {
+      "name": "Vakpro",
+      "email": "vakkkk@gmail.com",
+      "id": "oQP7CAZob",
+      "avatar": "http://res.cloudinary.com/dqaldb7bh/image/upload/v1596734520/y04bincajrmhc3s5ztpo.png",
+      "isAdmin": false,
+      "wrongLoginCount": 0,
+      "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6"
+    },
+    {
+      "name": "asdasd",
+      "email": "aa@gmail.com",
+      "id": "axg69YZgS",
+      "avatar": "http://res.cloudinary.com/dqaldb7bh/image/upload/v1596794180/twqolndfdnmci0p994ve.jpg",
+      "isAdmin": false,
+      "wrongLoginCount": 0,
+      "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6"
+    },
+    {
+      "name": "testtttt",
+      "email": "tt@gmail.com",
+      "id": "yKidwpI6F",
+      "avatar": "http://res.cloudinary.com/dqaldb7bh/image/upload/v1596794294/a13tolgi1lqwqtn2mpli.jpg",
       "isAdmin": false,
       "wrongLoginCount": 0,
       "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6"
