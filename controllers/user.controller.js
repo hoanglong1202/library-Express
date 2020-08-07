@@ -103,9 +103,13 @@ module.exports.update = function (req, res) {
 };
 
 //POST dữ liệu từ form vừa nhập lên server
-module.exports.postUpdate = function (req, res) {
+module.exports.postUpdate = async function (req, res) {
     var id = req.params.id;
-    req.body.avatar = req.file.path.split('\\').slice(1).join('/');
+    //req.body.avatar = req.file.path.split('\\').slice(1).join('/');
+    let imgURL = await cloudinary.uploader.upload(req.file.path, result => {
+        return result;
+    });
+    req.body.avatar = imgURL.url;
     db.get('users').find({
         id: id
     }).assign({

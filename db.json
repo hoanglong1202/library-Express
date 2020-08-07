@@ -71,6 +71,15 @@
       "isAdmin": false,
       "wrongLoginCount": 0,
       "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6"
+    },
+    {
+      "name": "asdasd",
+      "email": "tgtwet@gmail.com",
+      "id": "YET9VtflW",
+      "avatar": "http://res.cloudinary.com/dqaldb7bh/image/upload/v1596816466/afqmwih5egorem1wnlmi.jpg",
+      "isAdmin": false,
+      "wrongLoginCount": 0,
+      "pass": "$2b$10$k5Y3bFJExmR4lRaICkhqfeJdjs/rK033c4s1oOdDNGmQALhL5dRR6"
     }
   ],
   "books": [
@@ -98,6 +107,12 @@
       "title": "Định Mệnh",
       "description": "Nhớ Crush",
       "id": "VZfbqE9ij"
+    },
+    {
+      "title": "Dạy code 2",
+      "description": "nope",
+      "id": "K_hhcIa7w",
+      "coverUrl": "http://res.cloudinary.com/dqaldb7bh/image/upload/v1596818199/uynmozj24cyrxpticjnt.jpg"
     }
   ],
   "trans": [

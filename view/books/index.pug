@@ -22,6 +22,7 @@ block content
     table.table.table-bordered
         thead.thead-dark
             tr
+                th(scope='col') Cover
                 th(scope='col') Book Title
                 th(scope='col') 
                 th(scope='col') 
@@ -29,6 +30,11 @@ block content
         tbody
             each val in books
                 tr 
+                    td.text-center
+                        if val.coverUrl
+                            img.rounded(src= val.coverUrl, width="64px", height="64px",style="object-fit:cover;")
+                        else
+                            img.rounded(src="https://picsum.photos/200", width="64px", height="64px",style="object-fit:cover;")
                     td.text-center= val.title
                     td.text-center
                         a.btn.btn-light(href="/books/" + val.id) View
