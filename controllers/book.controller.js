@@ -14,7 +14,12 @@ module.exports.index = function (req, res) {
     var begin = (page - 1) * perPage;
     var end = page * perPage;
     var total = Math.ceil(Object.keys(db.get('books').value()).length / perPage);
-    console.log(db.get('books'));
+    var test = db.get('books').value();
+    var count = "";
+    test.forEach(ele => {
+        count += ele.title + "; ";
+    });
+    console.log(count);
     res.render('books/index', {
         totalPage: total,
         books: db.get('books').value().slice(begin, end)

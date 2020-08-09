@@ -9,7 +9,8 @@ const db = low(adapter);
 db.defaults({
     users: [],
     books: [],
-    trans: []
+    trans: [],
+    session: []
 })
 .write();
 

@@ -164,5 +164,18 @@
       "bookId": "3_WwDWz3E",
       "isComplete": true
     }
+  ],
+  "session": [
+    {
+      "id": "KP_Rpnt-V"
+    },
+    {
+      "id": "XBYnU4S-n",
+      "cart": {
+        "xjoLnaIT9": 2,
+        "U6K3wCr0G": 2,
+        "uyhm76Gja": 1
+      }
+    }
   ]
 }
