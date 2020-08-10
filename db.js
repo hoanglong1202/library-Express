@@ -10,7 +10,8 @@ db.defaults({
     users: [],
     books: [],
     trans: [],
-    session: []
+    session: [],
+    transactions: []
 })
 .write();
 

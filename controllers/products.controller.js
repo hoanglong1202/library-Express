@@ -14,8 +14,6 @@ module.exports.index = function (req, res) {
         var sessionCart = db.get('session').find({
             id: req.signedCookies.sessionId
         });
-        var cartLength = sessionCart.get('cart').size().value();
-        var valueArray = Object.values(sessionCart.get('cart').value());
         var count = 0;
         var data = sessionCart.get('cart').value();
         for(key in data) {

@@ -165,16 +165,13 @@
       "isComplete": true
     }
   ],
-  "session": [
+  "session": [],
+  "transactions": [
     {
-      "id": "KP_Rpnt-V"
-    },
-    {
-      "id": "XBYnU4S-n",
+      "id": "xjoLnaIT9",
       "cart": {
-        "xjoLnaIT9": 2,
-        "U6K3wCr0G": 2,
-        "uyhm76Gja": 1
+        "U6K3wCr0G": 1,
+        "uyhm76Gja": 2
       }
     }
   ]

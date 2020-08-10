@@ -1,0 +1,40 @@
+extend ../layouts/common
+
+block content
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+        a.navbar-brand(href='#')
+            img(src="/images/p1.jpg", alt="lolol",width="30", height="30",loading="lazy")
+        a.navbar-brand(href='#') Product
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/product') Home
+                li.nav-item
+                    a.nav-link(href='#') Cart 
+                        span= totalBook?totalBook:0
+        if user
+            p(style ="color:white;")= user.name
+    if books             
+        table.table.table-bordered
+            thead.thead-dark
+                tr
+                    th(scope='col') 
+                    th(scope='col') Book Title
+                    th(scope='col') Quantity
+                    th(scope='col') 
+            tbody
+                each val in books
+                    tr 
+                        td.text-center
+                            if val.coverUrl
+                                img.rounded(src= val.coverUrl, width="64px", height="64px",style="object-fit:cover;")
+                            else
+                                img.rounded(src="https://picsum.photos/200", width="64px", height="64px",style="object-fit:cover;")
+                        td.text-center= val.title
+                        td.text-center= val.quantity
+                        td.text-center
+                            a.btn.btn-light(href="/cart/" +  val.id + "/delete") Delete
+        .d-flex.justify-content-center
+            a.btn.btn-primary(href="/cart/checkout") Thanh toán
+    else    
+        .alert.alert-info Chưa có sản phẩm nào trong giỏ hàng

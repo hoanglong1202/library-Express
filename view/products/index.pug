@@ -8,10 +8,10 @@ block content
         #navbarNav.collapse.navbar-collapse
             ul.navbar-nav
                 li.nav-item
-                    a.nav-link(href='/') Home
+                    a.nav-link(href='/product') Home
                 li.nav-item
-                    a.nav-link(href='#') Cart 
-                        span= totalBook?totalBook:''
+                    a.nav-link(href='/cart') Cart 
+                        span= totalBook?totalBook:0
         if user
             p(style ="color:white;")= user.name
     .row
